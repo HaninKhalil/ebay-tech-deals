@@ -1,0 +1,34 @@
+=== Lab Session 6 – Business Reflection ===
+
+1. Can a machine learn to detect hot deals based on pricing and features?
+   Yes. The models — especially the Decision Tree — show that pricing signals
+   like discount_ratio and the gap between original_price and price are strong
+   enough for a machine to learn patterns. Even the baseline Logistic Regression
+   using only price and original_price achieved reasonable accuracy, confirming
+   that pricing data alone carries meaningful signal.
+
+2. Which features mattered most and why?
+   - discount_ratio: directly measures how much a product is discounted.
+   - original_price vs price gap: the bigger the gap, the more likely a hot deal.
+   - effective_price: captures the true cost including shipping.
+   - has_refurbished / has_bundle: refurbished and bundled items often carry
+     larger discounts.
+   - hour: some deals are posted at specific times (flash sales).
+
+3. Which model would you deploy for eBay and why?
+   The Decision Tree Classifier with extended features is the best choice for
+   deployment because:
+   - It captures non-linear relationships between features.
+   - It provides feature importance scores, which are valuable for business
+     insights.
+   - It is interpretable — eBay teams can understand and explain its decisions.
+   - It performed best on F1-score, balancing precision and recall.
+
+4. After balancing, precision improved/dropped — what does this mean for
+   customer trust?
+   After undersampling, recall typically improves (the model catches more actual
+   hot deals) but precision may drop slightly (some non-deals get labeled as
+   deals). From a customer trust perspective, showing a product as a "Hot Deal"
+   when it is not one damages trust more than missing a real deal. Therefore,
+   eBay should prioritize precision — only label a product a Hot Deal when the
+   model is highly confident — even if it means missing some genuine deals.

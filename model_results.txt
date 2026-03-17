@@ -1,0 +1,33 @@
+=== Task 4: Model Evaluation Results ===
+
+Model: Logistic Regression (Baseline)
+  Accuracy : 1.0000
+  Precision: 1.0000
+  Recall   : 1.0000
+  F1 Score : 1.0000
+  Confusion Matrix:
+[[9 0]
+ [0 1]]
+
+Model: Logistic Regression + Feature Engineering
+  Accuracy : 1.0000
+  Precision: 1.0000
+  Recall   : 1.0000
+  F1 Score : 1.0000
+  Confusion Matrix:
+[[9 0]
+ [0 1]]
+
+Model: Decision Tree Classifier
+  Accuracy : 1.0000
+  Precision: 1.0000
+  Recall   : 1.0000
+  F1 Score : 1.0000
+  Confusion Matrix:
+[[9 0]
+ [0 1]]
+
+=== Task 5: After Undersampling (Decision Tree) ===
+
+  BEFORE – Accuracy: 1.0000 | Precision: 1.0000 | Recall: 1.0000
+  AFTER  – Accuracy: 0.5000 | Precision: 0.5000 | Recall: 1.0000
